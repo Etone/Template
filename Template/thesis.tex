@@ -1,24 +1,34 @@
 \include{preamble}
 
-\title{Evaluierung verschiedener Container Technologien}
-\author{Corvin Schapöhler}
+\title{Template}
+\author{Etone}
 
 \begin{document}
-	\input{commands}
+	
+	%Entfernen der Chapter aus Counter. Manche werden erst mit begin{document} initiiert
+	\counterwithout{figure}{chapter}
+	\counterwithout{table}{chapter}
 	
 	\input{title}
 	
-	\input{content/erklaerung}
-	
+	\frontmatter
+	\pagestyle{front}
+	\input{erklaerung}
+%	\input{danksagung}
+	\input{zusammenfassung}
+
+	\setcounter{tocdepth}{1}
 	\tableofcontents
-	\addtocontents{toc}{\protect\thispagestyle{empty}}
-	
+
 	\mainmatter
-	\input{content/zusammenfassung}
-	\input{content/einleitung}
-	\input{content/grundlagen}
+	\pagestyle{main}
+	\input{content}
+	%\input{cheatsheet}
 	
-	\input{cheatsheet}
 	
+	\backmatter
+	\pagestyle{back}
+	\pagenumbering{Alph}
 	\input{direcotries}
+	
 \end{document}
