@@ -1,7 +1,10 @@
 \listoffigures
 \listoftables
-\lstlistoflistings
 
-\printnoidxglossary[sort=word]
+%\renewcommand{\listoflistingscaption}{Listings}
+%\listoflistings
 
-\printbibliography
+\printnoidxglossary[type=\acronymtype,nonumberlist, style=mcolindex]
+
+\nocite{*}
+\printbibliography[heading=bibintoc, title={Quellen und weiterführende Literatur}]
